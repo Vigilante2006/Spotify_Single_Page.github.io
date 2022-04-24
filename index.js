@@ -2,7 +2,7 @@ console.log("Welcome to Spotify");
 
 //Initialize the variables
 let songIndex = 0;
-let audioElement = new Audio("songs/1.mp3");
+let audioElement = new Audio("1.mp3");
 let masterPlay = document.getElementById("masterPlay");
 let miniPlayBtn = document.getElementById("miniPlayBtn");
 let myProgressBar = document.getElementById("myProgressBar");
@@ -17,72 +17,72 @@ let titleName = Array.from(document.getElementsByClassName("titleName"));
 let albumList = Array.from(document.getElementsByClassName("albumList"));
 let songAddedBy = Array.from(document.getElementsByClassName("songAddedBy"));
 let songs = [{
-    filePath: " songs/1.mp3",
+    filePath: " 1.mp3",
     songName: "Baarishein",
-    coverPath: "covers/1.png",
+    coverPath: "1.png",
     artist: "Atif Aslam",
     albumFolder: "Baarishein",
 },
 {
-    filePath: "songs/2.mp3",
+    filePath: "2.mp3",
     songName: "Haaye Oye",
-    coverPath: "covers/2.jpg",
+    coverPath: "2.jpg",
     artist: "QARAN",
     albumFolder: "Haaye Oye",
 },
 {
-    filePath: "songs/3.mp3",
+    filePath: "3.mp3",
     songName: "Ishq Mubarak",
-    coverPath: "covers/3.png",
+    coverPath: "3.png",
     artist: "Arijit Singh, Zack Knight",
     albumFolder: "Tum Bin-2",
 },
 {
-    filePath: "songs/4.mp3",
+    filePath: "4.mp3",
     songName: "Ishqan De Lekhe 2",
-    coverPath: "covers/4.png",
+    coverPath: "4.png",
     artist: "Sajjan Adeeb",
     albumFolder: "Ishqan De Lekhe 2",
 },
 {
-    filePath: " songs/5.mp3",
+    filePath: " 5.mp3",
     songName: "Meri Kamzori",
-    coverPath: "covers/5.png",
+    coverPath: "5.png",
     artist: "Ladi Singh",
     albumFolder: "Meri Kamzori",
 },
 {
-    filePath: "songs/6.mp3",
+    filePath: "6.mp3",
     songName: "Naino Ki To Baat Naina Jane Hai",
-    coverPath: "covers/6.png",
+    coverPath: "6.png",
     artist: "Prateeksha Shrivastava",
     albumFolder: "Shades Of Love",
 },
 {
-    filePath: "songs/7.mp3",
+    filePath: "7.mp3",
     songName: "Tenu Na Bol Pawaan",
-    coverPath: "covers/7.png",
+    coverPath: "7.png",
     artist: "Jyotica Tangri, Yasser Desai",
     albumFolder: "Behen Hogi Teri",
 },
 {
-    filePath: "songs/8.mp3",
+    filePath: "8.mp3",
     songName: "Tu Aa Jaana",
-    coverPath: "covers/8.png",
+    coverPath: "8.png",
     artist: "Palak Muchhal",
     albumFolder: "Tu Aa Jaana",
 },
 {
-    filePath: "songs/10.mp3",
+    filePath: "10.mp3",
     songName: "Zakhmi Dil",
-    coverPath: "covers/9.jfif",
+    coverPath: "9.jfif",
     artist: "Gippy Grewal",
     albumFolder: "Singh vs Kaur",
 },
 {
-    filePath: "songs/10.mp3",
+    filePath: "10.mp3",
     songName: "Zaroorat 2.0",
-    coverPath: "covers/10.png",
+    coverPath: "10.png",
     artist: "Rahul Jain",
     albumFolder: "Zaroorat 2.0",
 },
@@ -141,7 +141,7 @@ Array.from(document.getElementsByClassName("miniPlayBtn")).forEach(
             songIndex = parseInt(e.target.id);
             e.target.classList.remove("fa-play");
             e.target.classList.add("fa-pause");
-            audioElement.src = `songs/${songIndex}.mp3`;
+            audioElement.src = `${songIndex}.mp3`;
             songName.innerText = songs[songIndex - 1].songName;
             profile.src = songs[songIndex - 1].coverPath;
             miniArtistName.innerText = songs[songIndex - 1].artist;
@@ -160,7 +160,7 @@ document.getElementById("previous").addEventListener("click", () => {
     } else {
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex + 1}.mp3`;
+    audioElement.src = `${songIndex + 1}.mp3`;
     songName.innerText = songs[songIndex].songName;
     profile.src = songs[songIndex].coverPath;
     miniArtistName.innerText = songs[songIndex].artist;
@@ -176,7 +176,7 @@ document.getElementById("next").addEventListener("click", () => {
     } else {
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex + 1}.mp3`;
+    audioElement.src = `${songIndex + 1}.mp3`;
     songName.innerText = songs[songIndex].songName;
     profile.src = songs[songIndex].coverPath;
     miniArtistName.innerText = songs[songIndex].artist;
@@ -197,7 +197,7 @@ audioElement.addEventListener("timeupdate", () => {
         } else {
             songIndex += 1;
         }
-        audioElement.src = `songs/${songIndex + 1}.mp3`;
+        audioElement.src = `${songIndex + 1}.mp3`;
         songName.innerText = songs[songIndex].songName;
         profile.src = songs[songIndex].coverPath;
         miniArtistName.innerText = songs[songIndex].artist;
